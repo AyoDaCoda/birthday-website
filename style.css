@@ -1,0 +1,566 @@
+:root{
+    --fancy-font: "Creattion Demo";
+    --name-font: "Rousael";
+    --gold: #f0d79c;
+}
+
+body{
+    margin: 0;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#container div{
+    text-align: center;
+}
+
+#begin_txt{
+    font-size: 1.4em;
+    transition: .3s ease-in-out ;
+}
+
+#count{
+    font-size: 11em;
+    margin: .4em;
+    transition: .3s ease-in-out;
+}
+
+
+
+
+
+
+#home{
+    background-image: url(images/wp12932952-golden-marble-wallpapers.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 100%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    transition: .6s ease-in-out;
+    visibility: hidden;
+    /* visibility: visible;
+    top: 0; */
+}
+
+#confetti, #confetti2{
+    position: absolute;
+    height: 250px;
+    z-index: 1;
+    right: -8%;
+    top: 8%;
+    opacity: 0;
+}
+
+#confetti{
+    left: -8%;
+}
+
+#writeup{
+    background-color: rgba(0, 0, 0, .3);
+    backdrop-filter: blur(4px);
+    width: 550px;
+    height: 320px;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 10em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: 100%;
+}
+
+@keyframes move {
+    0%{
+        top: 100%;
+    }
+    100%{
+        top: 0;
+    }
+}
+
+@keyframes card_move {
+    0%{
+        top: 100%;
+    }
+    100%{
+        top: 64%;
+    }
+}
+
+@keyframes opacity_move {
+    0%{
+        top: 100%;
+        opacity: 0;
+    }
+    100%{
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes opacity {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.fancy_txt{
+    background: url(images/unsplash_Ve1eQ10bsjw.png) 0 0 / cover no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: var(--fancy-font);
+    margin: 0;
+    transform: rotate(-10deg);
+}
+
+#hb{
+    font-size: 3em;
+    font-family: var(--fancy-font);
+    margin: 0;
+    position: relative;
+    opacity: 0;
+}
+
+#name{
+    font-family: var(--name-font);
+    font-size: 7em;
+    margin-top: -.4em;
+    margin-bottom: 0;
+    position: relative;
+    opacity: 0;
+    transform: rotate(0deg);
+}
+
+
+
+#info{
+    opacity: 0;
+}
+
+.birthday{
+    z-index: 3;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay{
+    z-index: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: background-color .3s ease-in-out;
+}
+
+#bday_card{
+    height: 450px;
+    width: 300px;
+    display: flex;
+    position: absolute;
+    top: 100%;
+    display: flex;
+    justify-content: center;
+    transition: .3s ease-in-out;
+    color: black;
+    transform-style: preserve-3d;
+    transform: perspective(2500px);
+}
+
+.card{
+    height: 450px;
+    width: 300px;
+    background-image: url(images/wp2229486-black-and-gold-marble-wallpapers.jpg);
+    background-size:cover;
+    position: absolute;
+    display: flex;
+    border-radius: 0px 10px 10px 0px;
+    justify-content: center;
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .2), 30px 0 50px rgba(0, 0, 0, .4);
+    transition: .3s ease-in-out;
+    transform-origin: left;
+}
+
+.card button{
+    visibility: hidden;
+    cursor: pointer;
+    margin-top: 5em;
+    background-color: var(--gold);
+    color: black;
+    border: none;
+    text-align: center;
+    padding: .5em 1.5em;
+    font-size: 1em;
+    border-radius: 15px;
+    height: 40px;
+}
+
+.back_card{
+    position: absolute;
+    background-color: #FDF7F1;
+    top: 0;
+    left: 0;
+    height: 450px;
+    width: 300px;
+    box-shadow: inset 100px 20px 100px rgba(117, 60, 6, 0.2);
+    display: flex;
+    justify-content: center;
+    border-radius: 0px 10px 10px 0px;
+    z-index: -1;
+}
+
+.back_card div{
+    width: 230px;
+    margin-top: 2em;
+    display: block;
+}
+
+.back_card .fancy_txt{
+    font-size: 3.5em;
+    position: absolute;
+    top: 60px;
+}
+
+.back_card img{
+    height: 150px;
+    position: absolute;
+    right: 20px;
+    top: 40px;
+}
+
+.body{
+    text-transform: inherit;
+    margin-top: 10em;
+    margin-bottom: 1em;
+}
+
+#next{
+    background-color: black;
+    height: 20px;
+    width: 20px;
+    position: relative;
+    padding: .6em;
+    border-radius: 50%;
+    left: 80%;
+    cursor: pointer;
+}
+
+.blow_candles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 4;
+    position: absolute;
+    bottom: 100%;
+    transition: .3s ease-in-out;
+}
+
+.blow_candles p{
+    font-size: 2.9em;
+    width: 500px;
+    text-align: center;
+    margin-bottom: .5em;
+}
+
+.buttons{
+    display: flex;
+    gap: 3em;
+}
+
+.buttons button{
+    padding: .7em 2em;
+    font-size: .9em;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--gold);
+    cursor: pointer;
+}
+
+.light_btn{
+    height: 36px;
+    background-color: white;
+    padding: .6em 1em;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.light_btn_black{
+    position: absolute;
+    height: 35px;
+    background-color: black;
+    border: 2px solid white;
+    padding: .6em 1em;
+    border-radius: 50%;
+    transition: opacity 1s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 8;
+}
+
+.candles_cont{
+    top: 0;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#exit_btn, .back_btn{
+    position: absolute;
+    left: 50px;
+    top: 40px;
+    cursor: pointer;
+}
+
+.candle_stand{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.candles{
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    bottom: 0;
+}
+
+.candle{
+    height: 256px;
+    width: 200px;
+    overflow: hidden;
+    border-radius: 2px solid white;
+}
+
+.candles img{
+    height: 250px;
+    transform: translateX(-120px) scale(1.5) translateY(-38px);
+
+}
+
+.base{
+    bottom: 0;
+    height: 200px;
+    width: 100%;
+    background: radial-gradient(63.56% 76.87% at 50% 0%, #74160E 0%, #2F0905 26%, #0E0302 77%);
+}
+
+.square{
+    background-color: red;
+    position: relative;
+    top: -203px;
+    left: 76px;
+    height: 60px;
+    width: 30px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.candles_cont p{
+    position: relative;
+    top: 100px;
+    font-size: 1.5em;
+}
+
+.pg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    top: 0;
+}
+
+.videos{
+    background: linear-gradient(180deg, #000 17%, #040101 64.5%, #0E0502 83.5%, #1C0904 100%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow:auto;
+}
+
+.videos .fancy_txt{
+    margin-top: .8em;
+    font-size: 8em;
+    margin-bottom: -.2em;
+}
+
+.candle_writeup{
+    width: 500px;
+    text-align: center;
+    line-height: 24px;
+    margin-bottom: 5em;
+}
+
+.vid{
+    width: 80%;
+    background-color: black;
+    border: 1px dashed var(--gold);
+    margin-bottom: 7em;
+    box-shadow: 0px 136px 38px 0px rgba(240, 215, 156, 0.00), 0px 87px 35px 0px rgba(240, 215, 156, 0.01), 0px 49px 29px 0px rgba(240, 215, 156, 0.05), 0px 22px 22px 0px rgba(240, 215, 156, 0.09), 0px 5px 12px 0px rgba(240, 215, 156, 0.10);
+}
+
+.vid p{
+    margin: 0;
+    padding: .2em 0 .5em .5em;
+}
+
+.images{
+    display: flex;
+    justify-content: center;
+    width: 97%;
+    gap: .5em;
+    margin-bottom: 7em;
+    flex-wrap: wrap;
+}
+
+.image{
+    width: 250px;
+}
+
+.img_txt{
+    width: 250px;
+    height: 0;
+    position: absolute;
+    background-color: rgba(240, 215, 156,.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: height .3s ease-in-out;
+}
+
+.img_txt p{
+    width: 200;
+    visibility: hidden;
+}
+
+.images .img{
+    height: 350px;
+    width: 250px;
+    object-fit: cover;
+}
+
+.image:hover .img_txt{
+    height: 350px;
+}
+
+.image:hover .img_txt p{
+    visibility: visible;
+}
+
+.message .fancy_txt{
+    margin-top: .6em;
+    transform: rotate(-8deg);
+}
+
+.message .candle_writeup{
+    margin-bottom: 1.5em;
+}
+
+input {
+    width: 600;
+    background-color: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    border-radius: 10px;
+    padding: .8em;
+    margin-bottom: 1.5em;
+}
+
+textarea{
+    width: 600;
+    background-color: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    border-radius: 10px;
+    padding: .5em;
+    margin-bottom: 1.5em;
+    font-size: 1.1em;
+    line-height: 20px;
+}
+
+#sub{
+    border: none;
+    background-color: var(--gold);
+    padding: .7em 7em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.confirm{
+    background-color: white;
+    color: black;
+    padding: .3em 5em;
+    position: absolute;
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    bottom: 93%;
+}
+
+.confirm_show{
+    opacity: 1;
+}
+
+
+@media screen and (min-width: 800px) {
+    #confetti{
+        left: 10%;
+    }
+    #confetti2{
+        right: 10%;
+    }
+
+    #writeup{
+        transform: scale(1.2);
+    }
+
+    .images{
+        gap: 4em;
+    }
+}
+
+

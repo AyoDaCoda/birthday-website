@@ -1,0 +1,174 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Page 1 -->
+    <div id="container">
+        <div>
+            <p id="begin_txt">Click screen 3 times to reveal gift</p>
+            <p id="count">1</p>
+        </div>
+    </div>
+
+
+    <!-- Page 2 -->
+    <div id="home" class="show1">
+        <audio style="visibility: hidden;" muted loop>
+            <source src="images/happy-birthday-240348.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+          </audio>
+        <div>
+            <img id="confetti2" src="images/picmix.com_1434843.gif" alt="confetti">
+            <img id="confetti" src="images/picmix.com_1434843.gif" alt="confetti">
+        </div>
+        <div id="writeup">
+            <p id="hb">happy birthday</p>
+            <p id="name" class="fancy_txt">John</p>
+            <p id="info">You have a card 👇</p>
+        </div>
+        <div class="birthday">
+            <div class="overlay"></div>
+            
+            <div class="blow_candles">
+                <p>Want to blow out your candles?</p>
+                <div class="buttons">
+                    <button id="yes_btn">Yes</button>
+                    <button id="no_btn">No</button>
+                </div>
+            </div>
+
+            <div id="bday_card">
+                <!-- Card front -->
+                <div class="card">
+                    <button id="open_card">Open</button>
+                </div>
+
+                <!-- Card Back -->
+                <div class="back_card">
+                    <div>
+                        <p>From your love,</p>
+                        <p class="fancy_txt">Emily</p>
+                        <p class="body">You are my everything, and I love you more each day. Always and forever, it's you</p>
+                        <img id="next" src="images/arrow-narrow-right.png" alt="next">
+                    </div>
+                    <img src="images/Kalaria.jpg" alt="Kalaria">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Page 3 -->
+    <div class="candles_cont" id="candles">
+        <img id="exit_btn" src="images/exit.png" alt="back">
+        <p>Click on candle flame to extinguish</p>
+        <div class="candle_stand">
+            <div class="candles">
+                <div class="candle">
+                    <audio style="visibility: hidden;" muted>
+                        <source src="images/short-crowd-cheer-2-88701.mp3" type="audio/mpeg">
+                      Your browser does not support the audio element.
+                      </audio>
+                    <img class="gif" src="images/0904.gif" alt="candle">
+                    <div class="square"></div>
+                </div>
+                <div class="candle">
+                    <audio style="visibility: hidden;" muted>
+                        <source src="images/short-crowd-cheer-2-88701.mp3" type="audio/mpeg">
+                      Your browser does not support the audio element.
+                      </audio>
+                    <img class="gif" src="images/0904.gif" alt="candle">
+                    <div class="square"></div>
+                </div>
+                <div class="candle">
+                    <audio style="visibility: hidden;" muted>
+                        <source src="images/short-crowd-cheer-2-88701.mp3" type="audio/mpeg">
+                      Your browser does not support the audio element.
+                      </audio>
+                    <img class="gif" src="images/0904.gif" alt="candle">
+                    <div class="square"></div>
+                </div>
+            </div>
+            <div class="base"></div>
+        </div>
+    </div>
+
+
+    <div class="videos pg">
+        <img class="back_btn" src="images/exit.png" alt="back">
+        <p class="fancy_txt">Videos</p>
+        <p class="candle_writeup">Looking back to the wonderful times I had with you this your past years makes me so happy I knew you❤️ (exit page on top left)</p>
+        <div class="vid">
+            <p>You are amazing</p>
+            <video width="100%" height="500" controls>
+                <source src="images/vid_1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="vid">
+            <p>My best friend 🤗</p>
+            <video width="100%" height="500" controls>
+                <source src="images/vid_2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="vid">
+            <p>Now we can watch those movies you always wanted</p>
+            <video width="100%" height="500" controls>
+                <source src="images/vid_3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <div class="videos pg">
+        <img class="back_btn" src="images/exit.png" alt="back">
+        <p class="fancy_txt">Images</p>
+        <p class="candle_writeup">Pictures of me and you that I cherish (exit page on top left)</p>
+        <div class="images"> 
+            <div class="image">
+                <div class="img_txt">
+                    <p>My Love</p>
+                </div>
+                <img class="img" src="images/img1.jpg" alt="image 1">
+            </div>
+            <div class="image">
+                <div class="img_txt">
+                    <p>My Darling</p>
+                </div>
+                <img class="img" src="images/img2.jpg" alt="image 2">
+            </div>    
+            <div class="image">
+                <div class="img_txt">
+                    <p>My Everything</p>
+                </div>
+                <img class="img" src="images/img3.jpg" alt="image 3">
+            </div>          
+        </div>
+    </div>
+
+    <div class="videos pg message">
+        <img class="back_btn" src="images/exit.png" alt="back">
+        <p class="fancy_txt">Say Thank you</p>
+        <p class="candle_writeup">You can send a little message to me ;) (exit page on top left)</p>
+        <form action="">
+            <input type="text" name="Name" placeholder="Your name">
+            <input type="email" name="Email" placeholder="Your email">
+            <textarea name="Message" id="msg" rows="5"></textarea>
+            <button id="sub">Done</button>
+        </form>
+                   
+        <div class="confirm">Email sent successfully!</div>
+    </div>
+    
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
